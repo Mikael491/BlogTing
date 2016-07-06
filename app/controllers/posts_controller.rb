@@ -8,6 +8,10 @@ class PostsController < ApplicationController
 		
 	end
 
+	def create
+		render plain: params[:article].inspect
+	end
+
 	def show
 		
 	end
