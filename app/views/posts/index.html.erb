@@ -1,9 +1,5 @@
 <h1>Check out these posts!</h1>
 
 <% @posts.each do |post| %>
-	<div id="post-<%=post.id%>" class="title">
-		<h3 class="title"><%=post.title%></h3>
-		<p>posted <%=time_ago_in_words(post.created_at)%></p>
-		<p><%=post.body%></p>
-	</div>	
+
 <%end%>
