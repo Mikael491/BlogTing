@@ -1,8 +1,7 @@
-<h1 class="header">New Post</h1>
+<h1>Editing Post</h1>
 
-<%= form_for :post, url: posts_path do |f| %>
-
-
+<%= form_for :post, url: post_path(@post), method: :patch do |f| %>
+ 
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2>
@@ -16,7 +15,7 @@
       </ul>
     </div>
   <% end %>
-
+ 
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
@@ -30,6 +29,7 @@
   <p>
     <%= f.submit %>
   </p>
+ 
 <% end %>
-
+ 
 <%= link_to 'back', posts_path %>

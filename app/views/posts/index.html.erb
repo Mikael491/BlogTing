@@ -1,9 +1,12 @@
-<h1>Check out these posts!</h1>
+<h1>All Blogs</h1>
+<%= link_to "add article", new_post_path %>
 
 <% @posts.each do |post| %>
 	<div id="post-<%=post.id%>" class="title">
 		<h3 class="title"><%=post.title%></h3>
 		<p>posted <%=time_ago_in_words(post.created_at)%></p>
 		<p><%=post.body%></p>
+		<%= link_to 'show', post_path(post) %>
+		<%= link_to 'edit', edit_post_path(post) %>
 	</div>	
 <%end%>
